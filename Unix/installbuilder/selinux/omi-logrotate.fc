@@ -1,1 +1,2 @@
 /var/opt/omi/log(/.*)?         system_u:object_r:var_log_t:s0
+/var/opt/omi/run/omiserver.pid system_u:object_r:var_t:s0

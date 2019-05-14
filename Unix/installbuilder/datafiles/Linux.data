@@ -292,7 +292,6 @@ chmod 500 /opt/omi/bin/support/config_keytab_update.sh
 /opt/omi/bin/support/config_keytab_update.sh --unconfigure
 /opt/omi/bin/support/config_keytab_update.sh --configure
 
-ConfigureOmiService
 ConfigureCronForLogRotate
 
 %Preuninstall_10
@@ -352,6 +351,7 @@ if [ -e /usr/sbin/semodule ]; then
         /sbin/restorecon -R /var/opt/omi/log/ > /dev/null 2>&1
     fi
 fi
+ConfigureOmiService
 
 %Postuninstall_1500
 if [ -e /usr/sbin/semodule ]; then
